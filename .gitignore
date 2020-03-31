@@ -1,6 +1,7 @@
 # Compiled files
 *.tfstate
 *.tfstate.backup
+*.zip
 *.bak
 
 # Module directory
@@ -17,5 +18,5 @@ tmp
 lambda
 *~HEAD
 *backup
-*.bak
+
 .terraform.tfstate.lock.info
