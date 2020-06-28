@@ -26,31 +26,7 @@ module "dax" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| cluster | n/a | `map` | <pre>{<br>  "availability_zones": [<br>    ""<br>  ],<br>  "cluster_name": "cluster-example",<br>  "description": "Test DAX cluster",<br>  "maintenance_window": "sun:05:00-sun:09:00",<br>  "node_type": "dax.r4.large",<br>  "notification_topic_arn": "",<br>  "replication_factor": 1,<br>  "security_group_ids": [<br>    ""<br>  ]<br>}</pre> | no |
-| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
-| iam\_role\_arn | n/a | `string` | `""` | no |
-| parameters\_group\_name | The Name of the parameter Group | `string` | `"example"` | no |
-| params | n/a | `list` | <pre>[<br>  {<br>    "name": "query-ttl-millis",<br>    "value": "100000"<br>  },<br>  {<br>    "name": "record-ttl-millis",<br>    "value": "100000"<br>  }<br>]</pre> | no |
-| server\_side\_encryption | To set DAX as encrypted | `bool` | `true` | no |
-| subnet\_group\_name | The Name of the Subnet Group | `string` | `"example"` | no |
-| subnet\_ids | Subnets to put the DAX cluster in | `list` | <pre>[<br>  ""<br>]</pre> | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| cluster | n/a |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Help
 
@@ -101,8 +77,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=Build+Harness&url=https://github.com/JamesWoolfenden/terraform-dynamodb
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=Build+Harness&url=https://github.com/JamesWoolfenden/terraform-dynamodb
