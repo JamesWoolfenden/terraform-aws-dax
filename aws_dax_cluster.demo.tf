@@ -12,7 +12,7 @@ resource "aws_dax_cluster" "demo" {
 
   #checkov test required
   server_side_encryption {
-    enabled = var.server_side_encryption
+    enabled = true
   }
 
   subnet_group_name = aws_dax_subnet_group.example.name
