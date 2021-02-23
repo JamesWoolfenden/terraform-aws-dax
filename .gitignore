@@ -2,11 +2,11 @@
 *.tfstate
 *.tfstate.backup
 *.zip
-*.bak
 
 # Module directory
 .terraform/
 .terraform
+__pycache__/
 .idea
 *.iml
 *.orig
@@ -18,7 +18,6 @@ tmp
 lambda
 *~HEAD
 *backup
-
+*.bak
 .terraform.tfstate.lock.info
-__pycache__/
 .terraform.lock.hcl
