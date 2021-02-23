@@ -84,7 +84,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-dyna
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright 2019-2021 James Woolfenden
 
 ## License
 
