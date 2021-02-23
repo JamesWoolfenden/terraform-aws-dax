@@ -1,6 +1,6 @@
 variable "common_tags" {
   description = "This is to help you add tags to your cloud objects"
-  type        = map
+  type        = map(any)
 }
 
 variable "cluster" {
@@ -18,7 +18,7 @@ variable "cluster" {
 
 variable "subnet_ids" {
   description = "Subnets to put the DAX cluster in"
-  type        = list
+  type        = list(any)
   default     = [""]
 }
 
