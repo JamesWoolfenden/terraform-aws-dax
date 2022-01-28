@@ -28,15 +28,16 @@ module "dax" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
@@ -44,30 +45,31 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_dax_cluster.demo](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_cluster) | resource |
+| Name                                                                                                                               | Type     |
+| ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [aws_dax_cluster.demo](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_cluster)                    | resource |
 | [aws_dax_parameter_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_parameter_group) | resource |
-| [aws_dax_subnet_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_subnet_group) | resource |
+| [aws_dax_subnet_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_subnet_group)       | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | `map` | <pre>{<br>  "availability_zones": [<br>    ""<br>  ],<br>  "cluster_name": "cluster-example",<br>  "description": "Test DAX cluster",<br>  "maintenance_window": "sun:05:00-sun:09:00",<br>  "node_type": "dax.r4.large",<br>  "notification_topic_arn": "",<br>  "replication_factor": 1,<br>  "security_group_ids": [<br>    ""<br>  ]<br>}</pre> | no |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| <a name="input_iam_role_arn"></a> [iam\_role\_arn](#input\_iam\_role\_arn) | n/a | `string` | `""` | no |
-| <a name="input_parameters_group_name"></a> [parameters\_group\_name](#input\_parameters\_group\_name) | The Name of the parameter Group | `string` | `"example"` | no |
-| <a name="input_params"></a> [params](#input\_params) | n/a | `list` | <pre>[<br>  {<br>    "name": "query-ttl-millis",<br>    "value": "100000"<br>  },<br>  {<br>    "name": "record-ttl-millis",<br>    "value": "100000"<br>  }<br>]</pre> | no |
-| <a name="input_server_side_encryption"></a> [server\_side\_encryption](#input\_server\_side\_encryption) | To set DAX as encrypted | `bool` | `true` | no |
-| <a name="input_subnet_group_name"></a> [subnet\_group\_name](#input\_subnet\_group\_name) | The Name of the Subnet Group | `string` | `"example"` | no |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | Subnets to put the DAX cluster in | `list(any)` | <pre>[<br>  ""<br>]</pre> | no |
+| Name                                                                                                | Description                                        | Type        | Default                                                                                                                                                                                                                                                                                                                             | Required |
+| --------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
+| <a name="input_cluster"></a> [cluster](#input_cluster)                                              | n/a                                                | `map`       | <pre>{<br> "availability_zones": [<br> ""<br> ],<br> "cluster_name": "cluster-example",<br> "description": "Test DAX cluster",<br> "maintenance_window": "sun:05:00-sun:09:00",<br> "node_type": "dax.r4.large",<br> "notification_topic_arn": "",<br> "replication_factor": 1,<br> "security_group_ids": [<br> ""<br> ]<br>}</pre> |    no    |
+| <a name="input_common_tags"></a> [common_tags](#input_common_tags)                                  | This is to help you add tags to your cloud objects | `map(any)`  | n/a                                                                                                                                                                                                                                                                                                                                 |   yes    |
+| <a name="input_iam_role_arn"></a> [iam_role_arn](#input_iam_role_arn)                               | n/a                                                | `string`    | `""`                                                                                                                                                                                                                                                                                                                                |    no    |
+| <a name="input_parameters_group_name"></a> [parameters_group_name](#input_parameters_group_name)    | The Name of the parameter Group                    | `string`    | `"example"`                                                                                                                                                                                                                                                                                                                         |    no    |
+| <a name="input_params"></a> [params](#input_params)                                                 | n/a                                                | `list`      | <pre>[<br> {<br> "name": "query-ttl-millis",<br> "value": "100000"<br> },<br> {<br> "name": "record-ttl-millis",<br> "value": "100000"<br> }<br>]</pre>                                                                                                                                                                             |    no    |
+| <a name="input_server_side_encryption"></a> [server_side_encryption](#input_server_side_encryption) | To set DAX as encrypted                            | `bool`      | `true`                                                                                                                                                                                                                                                                                                                              |    no    |
+| <a name="input_subnet_group_name"></a> [subnet_group_name](#input_subnet_group_name)                | The Name of the Subnet Group                       | `string`    | `"example"`                                                                                                                                                                                                                                                                                                                         |    no    |
+| <a name="input_subnet_ids"></a> [subnet_ids](#input_subnet_ids)                                     | Subnets to put the DAX cluster in                  | `list(any)` | <pre>[<br> ""<br>]</pre>                                                                                                                                                                                                                                                                                                            |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
+| Name                                                     | Description |
+| -------------------------------------------------------- | ----------- |
+| <a name="output_cluster"></a> [cluster](#output_cluster) | n/a         |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Help
@@ -84,7 +86,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-dyna
 
 ## Copyrights
 
-Copyright 2019-2021 James Woolfenden
+Copyright 2019-2022 James Woolfenden
 
 ## License
 
