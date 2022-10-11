@@ -19,7 +19,6 @@ variable "cluster" {
 variable "subnet_ids" {
   description = "Subnets to put the DAX cluster in"
   type        = list(any)
-  default     = [""]
 }
 
 variable "server_side_encryption" {
@@ -28,9 +27,6 @@ variable "server_side_encryption" {
   default     = true
 }
 
-variable "iam_role_arn" {
-  default = ""
-}
 
 variable "params" {
   default = [
@@ -53,5 +49,5 @@ variable "subnet_group_name" {
 variable "parameters_group_name" {
   description = "The Name of the parameter Group"
   type        = string
-  default     = "example"
+  default     = "pike"
 }
