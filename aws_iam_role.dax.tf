@@ -17,7 +17,7 @@ tags = var.common_tags
 
 
 resource "aws_iam_role_policy" "dax" {
-    role = aws_iam_role.dax.arn
+    role = aws_iam_role.dax.name
     policy = jsonencode({
     "Version": "2012-10-17",
     "Statement": [
@@ -36,10 +36,12 @@ resource "aws_iam_role_policy" "dax" {
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:dynamodb:us-west-2:accountID:*"
+                "arn:aws:dynamodb:us-west-2:${data.aws_caller_identity.current.account_id}:*"
             ]
         }
     ]
 })
 
 }
+
+data "aws_caller_identity" "current" {}
