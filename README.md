@@ -95,16 +95,25 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "dax:CreateCluster",
                 "dax:CreateParameterGroup",
                 "dax:CreateSubnetGroup",
+                "dax:DeleteCluster",
                 "dax:DeleteParameterGroup",
                 "dax:DeleteSubnetGroup",
+                "dax:DescribeClusters",
                 "dax:DescribeParameterGroups",
                 "dax:DescribeParameters",
                 "dax:DescribeSubnetGroups",
+                "dax:ListTags",
+                "dax:TagResource",
+                "dax:UntagResource",
+                "dax:UpdateCluster",
                 "dax:UpdateParameterGroup"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -119,7 +128,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:RevokeSecurityGroupEgress",
                 "ec2:RevokeSecurityGroupIngress"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
@@ -134,10 +145,14 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListAttachedRolePolicies",
                 "iam:ListInstanceProfilesForRole",
                 "iam:ListRolePolicies",
+                "iam:PassRole",
                 "iam:PutRolePolicy",
-                "iam:TagRole"
+                "iam:TagRole",
+                "iam:UntagRole"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
