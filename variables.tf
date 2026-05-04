@@ -2,7 +2,6 @@ variable "common_tags" {
   description = "This is to help you add tags to your cloud objects"
   type        = map(any)
 }
-
 variable "cluster" {
   default = {
     cluster_name           = "cluster-example"
@@ -15,19 +14,15 @@ variable "cluster" {
     security_group_ids     = [""]
   }
 }
-
 variable "subnet_ids" {
   description = "Subnets to put the DAX cluster in"
   type        = list(any)
 }
-
 variable "server_side_encryption" {
   description = "To set DAX as encrypted"
   type        = bool
   default     = true
 }
-
-
 variable "params" {
   default = [
     {
@@ -39,13 +34,11 @@ variable "params" {
       value = "100000"
   }]
 }
-
 variable "subnet_group_name" {
   description = "The Name of the Subnet Group"
   type        = string
   default     = "example"
 }
-
 variable "parameters_group_name" {
   description = "The Name of the parameter Group"
   type        = string
