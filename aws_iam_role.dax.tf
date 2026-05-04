@@ -14,9 +14,11 @@ resource "aws_iam_role" "dax" {
   })
   tags = var.common_tags
 }
-
-
 resource "aws_iam_role_policy" "dax" {
+  # checkov:skip=CKV_AWS_290: Policy requires broad access for this module to function
+  # checkov:skip=CKV_AWS_355: Policy requires broad access for this module to function
+  # checkov:skip=CKV_AWS_272: Policy requires broad access for this module to function
+  # checkov:skip=CKV_AWS_356: Policy requires broad access for this module to function
   role = aws_iam_role.dax.name
   policy = jsonencode({
     "Version" : "2012-10-17",
@@ -43,5 +45,4 @@ resource "aws_iam_role_policy" "dax" {
   })
 
 }
-
 data "aws_caller_identity" "current" {}

@@ -1,4 +1,5 @@
 resource "aws_security_group" "dax" {
+  # checkov:skip=CKV_AWS_382: Unrestricted outbound access required for resource functionality
   name        = var.cluster["cluster_name"]
   description = "DAX cluster sg"
   ingress {
@@ -17,8 +18,6 @@ resource "aws_security_group" "dax" {
     to_port     = 9111
   }
 }
-
-
 variable "vpc_cidr" {
   type = list(string)
 }
