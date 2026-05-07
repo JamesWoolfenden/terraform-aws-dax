@@ -35,7 +35,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -45,22 +45,23 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_dax_cluster.demo](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_cluster) | resource |
 | [aws_dax_parameter_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_parameter_group) | resource |
 | [aws_dax_subnet_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dax_subnet_group) | resource |
 | [aws_iam_role.dax](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.dax](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_security_group.dax](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | `map` | <pre>{<br>  "availability_zones": [<br>    ""<br>  ],<br>  "cluster_name": "cluster-example",<br>  "description": "Test DAX cluster",<br>  "maintenance_window": "sun:05:00-sun:09:00",<br>  "node_type": "dax.r4.large",<br>  "notification_topic_arn": "",<br>  "replication_factor": 1,<br>  "security_group_ids": [<br>    ""<br>  ]<br>}</pre> | no |
+| ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | `map` | <pre>{<br/>  "availability_zones": [<br/>    ""<br/>  ],<br/>  "cluster_name": "cluster-example",<br/>  "description": "Test DAX cluster",<br/>  "maintenance_window": "sun:05:00-sun:09:00",<br/>  "node_type": "dax.r4.large",<br/>  "notification_topic_arn": "",<br/>  "replication_factor": 1,<br/>  "security_group_ids": [<br/>    ""<br/>  ]<br/>}</pre> | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | <a name="input_parameters_group_name"></a> [parameters\_group\_name](#input\_parameters\_group\_name) | The Name of the parameter Group | `string` | `"pike"` | no |
-| <a name="input_params"></a> [params](#input\_params) | n/a | `list` | <pre>[<br>  {<br>    "name": "query-ttl-millis",<br>    "value": "100000"<br>  },<br>  {<br>    "name": "record-ttl-millis",<br>    "value": "100000"<br>  }<br>]</pre> | no |
+| <a name="input_params"></a> [params](#input\_params) | n/a | `list` | <pre>[<br/>  {<br/>    "name": "query-ttl-millis",<br/>    "value": "100000"<br/>  },<br/>  {<br/>    "name": "record-ttl-millis",<br/>    "value": "100000"<br/>  }<br/>]</pre> | no |
 | <a name="input_server_side_encryption"></a> [server\_side\_encryption](#input\_server\_side\_encryption) | To set DAX as encrypted | `bool` | `true` | no |
 | <a name="input_subnet_group_name"></a> [subnet\_group\_name](#input\_subnet\_group\_name) | The Name of the Subnet Group | `string` | `"example"` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | Subnets to put the DAX cluster in | `list(any)` | n/a | yes |
@@ -69,7 +70,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
 | <a name="output_parameters"></a> [parameters](#output\_parameters) | n/a |
 | <a name="output_policy"></a> [policy](#output\_policy) | n/a |
